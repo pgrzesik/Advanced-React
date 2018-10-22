@@ -1,10 +1,13 @@
 import React from 'react';
+import Link from 'next/link';
 
-class Sell extends React.Component {
-
-  render() {
-    return <p>Sell!</p>;
-  }
-}
+const Sell = () => (
+  <div>
+    <p>Sell!</p>
+    <Link href='/'>
+      Home!
+    </Link>
+  </div>
+);
 
 export default Sell;
