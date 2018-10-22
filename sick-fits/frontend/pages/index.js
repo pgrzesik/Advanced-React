@@ -5,7 +5,7 @@ const Home = () => (
   <div>
     <p>Hey</p>
     <Link href='/sell'>
-      Sell!
+      <a>Sell!</a>
     </Link>
   </div>
 );
