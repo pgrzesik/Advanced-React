@@ -1,6 +1,10 @@
 const Query = {
-  dogs(parent, args, ctx, info) {
-    return [{name: "Doggo"}, {name: "Doggero"}];
+  async items(parent, args, ctx, info) {
+    const items = await ctx.db.query.items();
+
+    console.log(items);
+
+    return items;
   },
 };
 
