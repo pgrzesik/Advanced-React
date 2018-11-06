@@ -4,6 +4,7 @@ import Form from "./styles/Form";
 import ErrorMessage from "./ErrorMessage";
 import formatMoney from "../lib/formatMoney";
 import gql from "graphql-tag";
+import Router from "next/router";
 
 const CREATE_ITEM_MUTATION = gql`
   mutation CREATE_ITEM_MUTATION(
@@ -50,6 +51,10 @@ export default class CreateItem extends React.Component {
                 e.preventDefault();
                 const res = await createItem();
                 console.log(res);
+                Router.push({
+                  pathname: "/item",
+                  query: { id: res.data.createItem.id }
+                });
               }}
             >
               <ErrorMessage error={error} />
