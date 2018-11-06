@@ -54,3 +54,5 @@ export default class Items extends React.Component {
     );
   }
 }
+
+export { ALL_ITEMS_QUERY };
